@@ -1,7 +1,10 @@
+require "pry"
+
 def nyc_pigeon_organizer(input)
   pigeon_data = {}
    	  input.each do |attribute, data|
     data.each do |quality, names|
+      binding.pry
       names.each do |name|
         if pigeon_data[name]
           if pigeon_data[name][attribute]
@@ -17,3 +20,5 @@ def nyc_pigeon_organizer(input)
   end
   pigeon_data
 end
+
+nyc_pigeon_organizer(input)
